@@ -10,12 +10,9 @@
 #endif
 
 //Include sub-libraries
-#include "MIDI/midi.h"
-#include "Program/program.h"
-
-
+#include "midi.h"
+#include "program.h"
+#include "lcd.h"
+#include "filehandler.h"
 
 #endif
-
-
-

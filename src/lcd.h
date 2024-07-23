@@ -1,7 +1,7 @@
-// program.h
+// lcd.h
 
-#ifndef _PROGRAM_h
-#define _PROGRAM_h
+#ifndef _LCD_h
+#define _LCD_h
 
 #if defined(ARDUINO) && ARDUINO >= 100
 	#include "arduino.h"
@@ -9,9 +9,8 @@
 	#include "WProgram.h"
 #endif
 
-namespace program {
-
+namespace lcd {
+  void setup();
 }
 
 #endif
-

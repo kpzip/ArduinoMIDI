@@ -10,11 +10,12 @@
 #endif
 
 namespace MIDI {
-	void setup(HardwareSerial* port);
+	void setup(HardwareSerial& port);
 	boolean noteOn(uint8_t channel, uint8_t note, uint8_t velocity = 80);
 	void noteOnUnsafe(uint8_t channel, uint8_t note, uint8_t velocity = 80);
 	boolean noteOff(uint8_t channel, uint8_t note, uint8_t velocity = 0);
 	void noteOffUnsafe(uint8_t channel, uint8_t note, uint8_t velocity = 0);
+	void allOff(uint8_t channel, uint8_t velocity = 0);
 }
 
 #endif
