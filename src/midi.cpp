@@ -13,7 +13,10 @@ static const uint8_t CHANNEL_BITMASK = 0b00001111;
 static const uint8_t NOTE_ON = 0x90;
 static const uint8_t NOTE_OFF = 0x80;
 
+static HardwareSerial* midi_port;
+
 void MIDI::setup(HardwareSerial& port) {
+  midi_port = &port;
 	port.begin(MIDI_BAUD, SERIAL_8N1);
 }
 
@@ -23,7 +26,7 @@ inline uint8_t withChannel(uint8_t channel, uint8_t status) {
 
 void send(uint8_t* bytes, size_t len) {
 	for (size_t i = 0; i < len; i++) {
-		Serial.print(bytes[i]);
+		midi_port->write(bytes[i]);
 	}
 }
 
