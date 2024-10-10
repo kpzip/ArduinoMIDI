@@ -1,0 +1,3 @@
+# Make eagle files visible in repo since this repo shouldn't be labeled as cpp
+*.sch linguist-detectable
+*.sch linguist-detectable
